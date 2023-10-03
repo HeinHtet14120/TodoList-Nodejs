@@ -1,0 +1,90 @@
+body{
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+h1{
+    font-family: 'Vollkorn', serif;
+}
+#days{
+    font-size: 2rem;
+    font-family: 'DM Serif Text', serif;
+    color: #A0C49D;
+    text-shadow: 1px 1px 3px rgb(223, 223, 223);
+}
+
+h2{
+    font-size: 1.3rem;
+    font-family: 'Neuton', serif;
+    color: black;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+    padding: 30px;
+    font-family: 'Vollkorn', serif;
+}
+
+
+.container{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.todoClass{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.list-group{
+    width: 400px;
+    border-radius: 10px;
+    margin: 20px;
+    font-size: 1.3rem;
+    font-family: 'Neuton', serif;
+    text-align: left;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.list-group-item label{
+    width: 80%;
+}
+.addClass{
+    display: flex;
+    width: 100%;
+    border-style: hidden;
+}
+
+.addClass .adding{
+    width: 80%;
+    margin-right: 20px;
+}
+
+.buttonClass{
+    text-align: center;
+}
+
+.addClass .buttonClass i{
+    padding: 5px;
+    font-size: 20px;
+}
+
+.adding{
+    border-color: #F5F5F5;
+}
+
+.adding:hover{
+    border-color: #F5F5F5;
+}
+
+#doneList:checked+label {
+    text-decoration: line-through;
+}
+
+footer p {
+    font-size: .8rem;
+    color: #9DB2BF;
+}

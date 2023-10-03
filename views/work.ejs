@@ -1,0 +1,52 @@
+<%- include ('partials/header.ejs') %>
+<body>
+   
+    <div class="container">
+
+        
+        <a href="/" class="btn btn-outline-secondary ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
+            </svg>
+        </a>
+        <a href="/work" class="btn btn-outline-secondary ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+            <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H4Zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+            <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.373 5.373 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2H2Z"/>
+          </svg>
+        </a>
+    </div>
+    
+    <div class="container">
+        <h1>Welcome From the Work Side</h1>
+        <% if(locals.date){%>
+            <h2><span id="days"><%= day %>,</span><%= date%></h2>
+       <% } %>
+        
+
+        <div class="todoClass">
+        <ul class="list-group list-group-flush">
+        <% if(locals.list){ %>
+            <% list.forEach(test => { %>
+                <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" id="doneList" >
+                    <label for=""><%= test %></label>
+                </li>
+           <% }); %>
+        <% } %>
+                <li class="list-group-item">
+                    <form action="/workadd" method="post" class="addClass">
+                        <input class="form-control adding"  type="text" name="todo" placeholder="Add Your ToDoList" id="currentvalue">
+                        <button type="submit" class="btn btn-secondary buttonClass">
+                            <i class="bi bi-plus-circle-fill"></i>
+                          </button>
+                    </form>
+
+                </li>
+        </ul>
+        </div>    
+    </div>
+    
+</body>
+
+<%- include ('partials/footer.ejs') %>
